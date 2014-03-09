@@ -1,0 +1,21 @@
+import string
+
+text = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc sp"
+giv_text = list(text)
+alpha = list(string.letters)
+new_text=[]
+if len(alpha) < len(giv_text):
+    check_for = len(giv_text)
+else:
+    check_for = len(alpha)
+for i in range(check_for):
+    if i < len(giv_text):
+        if giv_text[i] in alpha:
+            a = alpha.index(giv_text[i])
+            if a > 49:
+                a = a - 26
+            new_text.append(alpha[a+2])
+        else:
+            new_text.append(giv_text[i])
+    
+print ''.join(new_text)

@@ -1,0 +1,10 @@
+import re
+text = "@#$e#^&q!%^&*(u@$&#%^&*a(#*@#*#*a)#$%^l()$((#$*$i($)$)$%@t%#$@#@#@#@#y$^%^%&%&&"
+pattern = "[A-Za-z]"
+result = re.findall(pattern, text)
+res=[]
+for each in result:
+    if each not in res:
+        res.append(each)
+res=''.join(res)
+print res
